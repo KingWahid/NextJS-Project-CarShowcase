@@ -15,7 +15,7 @@ const SearchManufacturer = ({manufacturer, setManufacturer}: SearchManufacturerP
         .includes(query.toLowerCase().replace(/\s+/g, "")))
     )
   return (
-    <div className='flex-1 flex max-sm:w-full justify start items-center'>
+    <div className='flex-1 flex max-sm:w-full justify start items-center border'>
         <Combobox>
             <div className='relative w-full'>
                 <ComboboxButton className="absolute top-[14px]">
@@ -43,8 +43,8 @@ const SearchManufacturer = ({manufacturer, setManufacturer}: SearchManufacturerP
                 leaveTo="opacity-0"
                 afterLeave={() => setquery('')}
             >
-                <ComboboxOptions
-              className='absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'
+                <ComboboxOptions 
+              className='absolute z-20 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'
               static
             >
               {filteredManufactures.length === 0 && query !== "" ? (
@@ -58,14 +58,14 @@ const SearchManufacturer = ({manufacturer, setManufacturer}: SearchManufacturerP
                 filteredManufactures.map((item) => (
                   <ComboboxOption
                     key={item}
-                    className={({ active }) =>
-                      `relative search-manufacturer__option ${
-                        active ? "bg-primary-blue text-black" : "text-gray-900"
+                    className={({ active }) => `
+                      relative cursor-default select-none py-2 pl-10 pr-4
+                      ${active ? "bg-black text-white" : "text-gray-900"
                       }`
                     }
                     value={item}
                   >
-                    {({ selected, active }) => (
+                    {({  active, selected }) => (
                       <>
                         <span className={`block truncate ${selected ? "font-medium" : "font-normal"}`}>
                           {item}

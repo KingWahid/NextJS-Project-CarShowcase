@@ -2,6 +2,7 @@
 import React from 'react'
 import CustomButton from './CustomButton'
 import Image from 'next/image'
+import Brand from './Brand'
 
 
 export default function Hero() {
@@ -14,7 +15,7 @@ export default function Hero() {
             <div className='2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold'>
                 <span className='text-gray-300'>The easiest</span> way to Find — the Most suitable car for <span className='text-gray-300'>Yourself!</span> 
             </div>
-            <p className='text-gray-400 text-[28px]'>We carry many cars with the most advanced features in the world.</p>
+            <p className='text-gray-400 text-[18px] sm:text-[28px]'>We carry many cars with the most advanced features in the world.</p>
         </div>
             
 
@@ -24,12 +25,13 @@ export default function Hero() {
                 <div className="absolute top-0 right-[150px] h-16 w-16">
                     <CustomButton 
                         title="Explore Cars"
-                        containerStyles="bg-black text-white rounded-full mt-6 border-8 border-white w-40 "
+                        containerStyles="bg-black text-white rounded-full mt-6 border-8 border-white w-40 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-gray-500 duration-300"
                         handleClick={handleScroll}
                     />
                 </div>
             </div>
         </div>
+        <Brand />
     </div>
   )
 }

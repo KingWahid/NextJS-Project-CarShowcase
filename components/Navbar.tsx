@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image'
 import { BoltIcon } from '@heroicons/react/20/solid'
-
 import CustomButton from './CustomButton';
 
 export default function Navbar() {
@@ -27,7 +26,7 @@ export default function Navbar() {
             <CustomButton 
                 title="Sign In"
                 btnType='button'
-                containerStyles='text-white rounded-full bg-black min-w[130px] border-2 border-gray font-bold'/>
+                containerStyles='text-primary-black rounded-full bg-white min-w[130px] border-2 border-gray font-bold'/>
         </nav>
     </header>
   )
