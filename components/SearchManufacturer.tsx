@@ -52,7 +52,7 @@ const SearchManufacturer = ({manufacturer, setManufacturer}: SearchManufacturerP
                   value={query}
                   className='"w-full h-[48px] pl-12 p-4 rounded-l-full max-sm:rounded-full bg-light-white outline-none cursor-pointer text-sm'
                 >
-                  Create "{query}"
+                  Create {query}
                 </ComboboxOption>
               ) : (
                 filteredManufactures.map((item) => (
